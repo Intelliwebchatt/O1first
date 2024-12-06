@@ -1,0 +1,242 @@
+:root {
+  --dark-blue: #0A2540;
+  --medium-blue: #0E5CAD;
+  --light-blue: #F0F8FF;
+
+  --text-color: #333;
+  --bg-color: #fff;
+  --ease-out-cubic: cubic-bezier(0.215,0.61,0.355,1);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: var(--light-blue);
+}
+
+header {
+  background: var(--dark-blue);
+  color: #fff;
+  padding: 1rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-nav .brand-text {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--dark-blue);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--dark-blue);
+  background: var(--light-blue);
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  background: var(--medium-blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s var(--ease-out-cubic);
+}
+
+.cta-button:hover {
+  background: var(--dark-blue);
+}
+
+.hero-bg {
+  /* Placeholder for background image or video */
+}
+
+/* Wave Section Separator Example */
+.wave-section {
+  position: relative;
+}
+
+.wave-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: url('../assets/wave.svg') no-repeat center/cover;
+}
+
+/* Info Section */
+.info-section {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.info-link {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: var(--medium-blue);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+/* Services Section */
+.services-section {
+  padding: 3rem 1rem;
+  background: var(--light-blue);
+  text-align: center;
+}
+
+.service-cards {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s var(--ease-out-cubic);
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card a {
+  text-decoration: none;
+  color: var(--medium-blue);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  border: none;
+  background: var(--medium-blue);
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: var(--dark-blue);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #fff;
+}
